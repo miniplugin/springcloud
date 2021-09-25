@@ -1,0 +1,3 @@
+[submodule "cloud-config-server-configuration"]
+	path = cloud-config-server-configuration
+	url = https://github.com/miniplugin/cloud-config-server-configuration.git
