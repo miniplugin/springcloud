@@ -1,0 +1,12 @@
+spring:
+  profiles: default
+configuration:
+  projectName:SpringBoot2_default_yaml
+management:
+  security:
+    enabled:true
+---
+spring:
+  profiles: prod
+configuration:
+  projectName:SpringBoot2_prod_yaml
