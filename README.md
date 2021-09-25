@@ -4,6 +4,7 @@
   ![ex_screenshot](./README/img.png)
 - git submodule add https://github.com/miniplugin/cloud-config-server-configuration.git
 - 위 명령으로 현재 깃 저장소에 클라우드용 설정 내용 가져오기처리
+- 주) 위 가져온 깃 내용은 확인용으로 직접 수정은 않됨, 수정하려면, 위 외부 깃 주소내용을 수정해야 함
 
 #### 20210925(토)
 - 스프링 클라우드 클라이언트 앱 jar 생성
