@@ -8,6 +8,18 @@
 - 외부 작업결과는 Git 메뉴의 Update Project 클릭하면 적용 됨.
 - 스프링 이니셜라이즈로 스프링부트 생성 후 인텔리 J 로 불러와서 pom.xml 파일 우클릭 > add Maven Project 선택하면 실행가능하게 변함.
 
+#### 20210926(일)
+- @RefreshScope 붙은 클래스 객체는 실행시 설정서버 정보를 항상 새로 불러 들인다.
+- RefreshCounter 로 위 @RefreshScope 가 붙은 ProjectNameRestController 스프링 빈의 리프레시를 확인
+- 3장 마무리: 주) configclient 앱 실습은 클라우드 파운드리(PaaS-TA) 에 배포 했을때 사용 가능 합니다.
+- 클라우드버스 와 래빗엠큐 로 메시징 데이터를 전달하기 위해서 pom.xml 에 아래 내용 추가 한다.
+```xml
+<dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-bus</artifactId>
+</dependency>
+```
+
 #### 20210925(토)
 - 액츄에이터 메이븐 라이브러리: https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-actuator
 - Config 서버 프로젝트 추가(아래)
