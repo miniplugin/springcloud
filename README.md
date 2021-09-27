@@ -8,6 +8,24 @@
 - 외부 작업결과는 Git 메뉴의 Update Project 클릭하면 적용 됨.
 - 스프링 이니셜라이즈로 스프링부트 생성 후 인텔리 J 로 불러와서 pom.xml 파일 우클릭 > add Maven Project 선택하면 실행가능하게 변함.
 
+#### 20210927(월)
+- 클라우드 파운드리 cli 설치: https://github.com/cloudfoundry/cli#downloads
+- V7 윈도우용 설치: https://github.com/cloudfoundry/cli/wiki/V7-CLI-Installation-Guide
+  ![ex_screenshot](./README/springcloud6.jpg)
+- cf login (endpoint: api.paas-ta.org
+- cf push configserver -b java_buildpack
+- 디버그: cf logs configserver --recent
+- cf buildepacks 로 사용가능한 빌드 팩 버전 확인
+- cf apps 로 현재 등록된 앱 확인
+- cf delete configserver
+- cf login --skip-ssl-validation
+- 파스타에 스프링 클라우드 프로젝트 배포 실패: configserver, springcloud2 모두
+- 자바 8에서 11로 마이그레이션시 아래 내용 추가해야 함.
+```xml
+env:
+      JBP_CONFIG_OPEN_JDK_JRE: '{ "jre": { version: 11.+ } }'
+```
+
 #### 20210926(일)
 - @RefreshScope 붙은 클래스 객체는 실행시 설정서버 정보를 항상 새로 불러 들인다.
 - RefreshCounter 로 위 @RefreshScope 가 붙은 ProjectNameRestController 스프링 빈의 리프레시를 확인

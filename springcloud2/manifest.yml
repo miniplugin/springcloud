@@ -1,0 +1,8 @@
+---
+applications:
+  - name: springcloud2
+    memory: 1024M
+    disk_quota: 1024M
+    instances: 1
+    host: springcloud2
+    domain: paas-ta.org
