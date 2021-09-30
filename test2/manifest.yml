@@ -1,0 +1,9 @@
+---
+applications:
+  - name: test2
+    memory: 1024MB
+    disk_quota: 1024M
+    instances: 1
+    host: test2
+    domain: paas-ta.org
+    path: target/test2-0.0.1-SNAPSHOT.jar
