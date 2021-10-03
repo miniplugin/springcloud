@@ -16,8 +16,7 @@ import static org.mockito.BDDMockito.given;
 @SpringBootTest
 public class AccountServiceTests {
 
-    @MockBean
-    // <1>
+    @MockBean//스프링 빈을 모의로 사용할때 지정
     private UsersService usersService;
 
     @MockBean

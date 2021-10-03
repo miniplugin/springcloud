@@ -8,6 +8,9 @@
 - 외부 작업결과는 Git 메뉴의 Update Project 클릭하면 적용 됨.
 - 스프링 이니셜라이즈로 스프링부트 생성 후 인텔리 J 로 불러와서 pom.xml 파일 우클릭 > add Maven Project 선택하면 실행가능하게 변함.
 
+#### 20211003(일)
+- JUnit5 단위 테스트(주피터사용): @JsonTest 사용 
+
 #### 20210930(목)
 - 스프링 부트 기본정보 기술참조: https://kok202.tistory.com/131
 - 4장 테스트 소스 참조: https://github.com/cloud-native-java/testing/tree/master/testing-basics/account-service
