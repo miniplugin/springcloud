@@ -8,9 +8,9 @@ public class AccountNumber {
     private String accountNumber;
 
     public AccountNumber(String accountNumber) {
-        Assert.notNull(accountNumber, "Account Number must not be null");
+        Assert.notNull(accountNumber, "Account Number 공백일 수 없습니다.");
         Assert.isTrue(accountNumber.length() == 9,
-                "Account Number must be exactly 9 characters");
+                "Account Number 는 반드시 9자 이어야 합니다.");
         this.accountNumber = accountNumber;
     }
 

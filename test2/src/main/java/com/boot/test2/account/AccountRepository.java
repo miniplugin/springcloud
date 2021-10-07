@@ -11,5 +11,5 @@ public interface AccountRepository extends
     List<Account> findAccountsByUsername(@Param("username") String username);
 
     Account findAccountByAccountNumber(
-            @Param("accountNumber") AccountNumber accountNumber);
+            @Param("accountNumber") String accountNumber);
 }

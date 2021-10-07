@@ -9,6 +9,24 @@
 - 주) 위 가져온 깃 내용은 확인용으로 직접 수정은 않됨, 수정하려면, 위 외부 깃 주소내용을 수정해야 함
 - 외부 작업결과는 Git 메뉴의 Update Project 클릭하면 적용 됨.
 - 스프링 이니셜라이즈로 스프링부트 생성 후 인텔리 J 로 불러와서 pom.xml 파일 우클릭 > add Maven Project 선택하면 실행가능하게 변함.
+- JUnit4 에서 @RunWith(SpringRunner.class) 사용한 애노테이션이 JUnit5 에서는 팰요 없음.
+
+#### 20211007(목): test2/com.boot.test2/account/AccountRepositoryTest.java
+- @DataJpaTest 사용:
+- AccountNumber 클래스는 숫자 널체크 및 개수 제한 조건을 줄수 있다.(아래)
+```java
+public AccountNumber(String accountNumber) {
+        Assert.notNull(accountNumber, "Account Number 공백일 수 없습니다.");
+        Assert.isTrue(accountNumber.length() == 9,
+                "Account Number 는 반드시 9자 이어야 합니다.");
+        this.accountNumber = accountNumber;
+    }
+```
+- 참고로, @DataJpaTest 를 사용하지 않는 스프링5 레커시에서는 Account.java 클래스에 아래처럼 널체크를 한다.
+```java
+@NotNull(message="빈값으로 저장할 수 없습니다.")
+private String accountNumber;
+```
 
 #### 20211004(월): test2/com.boot.test2/account/AccountControllerTest.java, AccountService.java
 - @WebMvcTest 사용: MVC 컨트롤러 테스트 전용 애노테이션 인터페이스
