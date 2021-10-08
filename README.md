@@ -10,6 +10,12 @@
 - 외부 작업결과는 Git 메뉴의 Update Project 클릭하면 적용 됨.
 - 스프링 이니셜라이즈로 스프링부트 생성 후 인텔리 J 로 불러와서 pom.xml 파일 우클릭 > add Maven Project 선택하면 실행가능하게 변함.
 - JUnit4 에서 @RunWith(SpringRunner.class) 사용한 애노테이션이 JUnit5 에서는 팰요 없음.
+- 스프링 클라우드는 여러 서비스가 HTTP 로 협력하는 마이크로서비스 아키텍처 작성을 쉽게 만들어 준다.
+
+#### 20211008(금) :test2/com.boot.test2/users/UsersServiceTests.java
+- 마이크로 서비스용 테스트인 @RestClientTest 애노테이션 사용
+- MockRestServiceServer 객체 사용: 운영 API 서버실행 없이(단, 서비스클래스에서 URI 필요) API 서비스 테스트 가능.
+- registerRestTemplate 레스트템플릿 사용으로 위 서버 반환값을 JSON 객체로 처리 가능하게 됨.
 
 #### 20211007(목): test2/com.boot.test2/account/AccountRepositoryTest.java
 - @DataJpaTest 사용:
