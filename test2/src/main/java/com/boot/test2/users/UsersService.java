@@ -8,14 +8,29 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import java.net.URI;
+import java.security.Principal;
+import java.util.Optional;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 import static org.springframework.http.RequestEntity.get;
 
 @Service
 public class UsersService {
-    private final String serviceHost;
-    private final RestTemplate restTemplate;
+
+    private UsersRepository usersRepository;
+    @Autowired
+    public UsersService(UsersRepository usersRepository) {
+        this.usersRepository = usersRepository;
+    }
+    public Users getUserByPrincipal(Principal principal) {
+        // 인증된 사용자 이름을 세션에서 가져오는 메소드
+        return Optional.ofNullable(principal)
+                .map(p -> usersRepository.findUserByUsername(p.getName())).orElse(null);
+    }
+
+    private String serviceHost;
+    private RestTemplate restTemplate;
+
     @Autowired
     public UsersService(RestTemplate restTemplate,
                         @Value("${user-service.host:user-service}") String sh) {

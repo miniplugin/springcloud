@@ -12,6 +12,13 @@
 - JUnit4 에서 @RunWith(SpringRunner.class) 사용한 애노테이션이 JUnit5 에서는 팰요 없음.
 - 스프링 클라우드는 여러 서비스가 HTTP 로 협력하는 마이크로서비스 아키텍처 작성을 쉽게 만들어 준다.
 
+#### 20211009(토) : 클라우드 클라우드 API 계약(아래 계정서비스는 컨슈머, 사용자서비스는 프러덕트 관계가 된다.)
+- 사용자 서비스:  https://github.com/cloud-native-java/testing/tree/master/testing-basics/user-service
+- 계정 서비스: https://github.com/cloud-native-java/testing/tree/master/testing-basics/account-service
+- PrincipalImpl 클래스 추가: http://www.javased.com/index.php?source_dir=openjdk-7%2Fsun%2Fsecurity%2Facl%2FPrincipalImpl.java
+- UsersService 는 AuthService 에서 반환받은 ID를 키값으로 해서 UsersRepository 를 통해 사용자의 상세 정보를 가져온다.
+- 테스트시 위 2개를 1개 프로젝트로 할지 아니면, 참조 URL 처럼 2개의 프로젝트로 분리할지 고민중... 
+
 #### 20211008(금) :test2/com.boot.test2/users/UsersServiceTests.java
 - 마이크로 서비스용 테스트인 @RestClientTest 애노테이션 사용
 - MockRestServiceServer 객체 사용: 운영 API 서버실행 없이(단, 서비스클래스에서 URI 필요) API 서비스 테스트 가능.
