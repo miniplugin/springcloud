@@ -12,6 +12,10 @@
 - JUnit4 에서 @RunWith(SpringRunner.class) 사용한 애노테이션이 JUnit5 에서는 팰요 없음.
 - 스프링 클라우드는 여러 서비스가 HTTP 로 협력하는 마이크로서비스 아키텍처 작성을 쉽게 만들어 준다.
 
+#### 20211010(일) : UsersService 제공자로서 마이크로서비스 프로젝트 준비
+- 소스참조: https://github.com/cloud-native-java/testing/tree/master/testing-microservices/user-microservice
+  ![ex_screenshot](./README/img_3.png)
+
 #### 20211009(토) : 클라우드 클라우드 API 계약(아래 계정서비스는 컨슈머, 사용자서비스는 프러덕트 관계가 된다.)
 - 사용자 서비스:  https://github.com/cloud-native-java/testing/tree/master/testing-basics/user-service
 - 계정 서비스: https://github.com/cloud-native-java/testing/tree/master/testing-basics/account-service
