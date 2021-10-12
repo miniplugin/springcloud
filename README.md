@@ -11,6 +11,15 @@
 - 스프링 이니셜라이즈로 스프링부트 생성 후 인텔리 J 로 불러와서 pom.xml 파일 우클릭 > add Maven Project 선택하면 실행가능하게 변함.
 - JUnit4 에서 @RunWith(SpringRunner.class) 사용한 애노테이션이 JUnit5 에서는 팰요 없음.
 - 스프링 클라우드는 여러 서비스가 HTTP 로 협력하는 마이크로서비스 아키텍처 작성을 쉽게 만들어 준다.
+- 마이크로서비스 계약관계 개념: product(제공자) <-contract(계약)-> consumer(소비자)
+
+#### 다음작업: 계정서비스(accountService consumer 소비자로서 마이크로서비스 프로젝트 작업)
+- 참조: https://github.com/cloud-native-java/testing/tree/master/testing-microservices/account-microservice
+
+#### 20211012(화) : 사용자서비스(UsersService product 제공자로서 마이크로서비스 프로젝트 작업)
+- 인텔리J 에서 메이븐프로젝트 jar 파일로 빌드 만들기
+- 인텔리J 기술참조: https://streamls.tistory.com/47
+![ex_screenshot](./README/img_3.png)
 
 #### 20211010(일) : UsersService 제공자로서 마이크로서비스 프로젝트 준비
 - 소스참조: https://github.com/cloud-native-java/testing/tree/master/testing-microservices/user-microservice

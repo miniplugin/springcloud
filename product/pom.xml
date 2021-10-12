@@ -67,8 +67,14 @@
 				<artifactId>spring-cloud-contract-maven-plugin</artifactId>
 				<version>3.0.4</version>
 				<extensions>true</extensions>
+				<!--
 				<configuration>
 					<testFramework>JUNIT5</testFramework>
+				</configuration>
+				-->
+				<configuration>
+					<baseClassForTests>users.microservices.product.ProductApplicationTests</baseClassForTests>
+					<basePackageForTests>users.microservices.product</basePackageForTests>
 				</configuration>
 			</plugin>
 			<plugin>
