@@ -19,7 +19,7 @@
 #### 20211012(화) : 사용자서비스(UsersService product 제공자로서 마이크로서비스 프로젝트 작업)
 - 인텔리J 에서 메이븐프로젝트 jar 파일로 빌드 만들기
 - 인텔리J 기술참조: https://streamls.tistory.com/47
-![ex_screenshot](./README/img_3.png)
+![ex_screenshot](./README/img_4.png)
 
 #### 20211010(일) : UsersService 제공자로서 마이크로서비스 프로젝트 준비
 - 소스참조: https://github.com/cloud-native-java/testing/tree/master/testing-microservices/user-microservice
