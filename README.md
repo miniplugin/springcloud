@@ -13,10 +13,16 @@
 - 스프링 클라우드는 여러 서비스가 HTTP 로 협력하는 마이크로서비스 아키텍처 작성을 쉽게 만들어 준다.
 - 마이크로서비스 계약관계 개념: product(제공자) <-contract(계약)-> consumer(소비자)
 
-#### 다음작업: 계정서비스(accountService consumer 소비자로서 마이크로서비스 프로젝트 작업)
+#### 20211023(토): 계정서비스(accountService consumer 소비자로서 마이크로서비스 프로젝트) 
+- 코딩작업 예정
+
+#### 20211022(금): 계정서비스(accountService consumer 소비자로서 마이크로서비스 프로젝트 작업)
 - 참조: https://github.com/cloud-native-java/testing/tree/master/testing-microservices/account-microservice
+- consumer 마이크로서비스 소비자 프로젝트 핵심: Contract Stub Runner 계약 모듈 사용
+- 컨슈머 마이크로서비스 소비자 프로젝트 준비
 
 #### 20211012(화) : 사용자서비스(UsersService product 제공자로서 마이크로서비스 프로젝트 작업)
+- product 마이크로서비스 제공자 프로젝트 핵심: contract-verifier 계약 모듈 사용
 - 인텔리J 에서 메이븐프로젝트 jar 파일로 빌드 만들기
 - 인텔리J 기술참조: https://streamls.tistory.com/47
 ![ex_screenshot](./README/img_4.png)
